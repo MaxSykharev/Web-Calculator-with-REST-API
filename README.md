@@ -10,7 +10,7 @@ To run the application, you'll need Docker and Docker Compose installed on your 
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/calculator_app.git
+git clone https://github.com/MaxSykharev/Web-Calculator-with-REST-API.git
 ```
 ### 2. Move into the project directory
 
