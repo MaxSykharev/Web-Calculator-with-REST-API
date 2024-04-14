@@ -1,0 +1,13 @@
+name: Display Secret Value
+
+on: [push]
+
+jobs:
+  display-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print secret value
+        run: echo "Secret TEST value is ${{ secrets.TEST }}"
