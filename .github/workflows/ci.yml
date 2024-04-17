@@ -17,7 +17,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
-          passphrase: PASSPHRASE
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             mkdir -p temp && \
             cd temp && \
