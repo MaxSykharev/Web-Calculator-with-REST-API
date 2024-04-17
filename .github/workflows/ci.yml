@@ -18,4 +18,5 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
+            ls -a
             deploy.sh
