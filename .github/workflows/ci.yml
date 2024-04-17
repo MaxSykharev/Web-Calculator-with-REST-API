@@ -19,7 +19,7 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             docker-compose down && \
-            rm -rf temp
+            sudo rm -rf temp
             mkdir -p temp && \
             cd temp && \
             git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
