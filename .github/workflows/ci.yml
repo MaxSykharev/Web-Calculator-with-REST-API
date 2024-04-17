@@ -20,6 +20,7 @@ jobs:
           script: |
             mkdir -p temp && \
             cd temp && \
+            pwd
             git pull git@github.com:tsgdigitalservices/lcc-mytsg.git && \
             cd lcc-mytsg && \
             docker-compose down && \
