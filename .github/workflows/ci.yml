@@ -13,7 +13,7 @@ jobs:
       - name: Deploy to production
         uses: appleboy/ssh-action@v1.0.3
         with:
-          debug: ${{ github.event_name == 'release' }}
+          debug: true
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
