@@ -22,7 +22,7 @@ jobs:
             docker-compose down && \
             docker rm -f $(docker ps -a -q)
             sudo rm -rf temp
-            mkdir -p temp && \
+            sudo mkdir -p temp && \
             cd temp && \
             git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
             cd lcc-mytsg && \
