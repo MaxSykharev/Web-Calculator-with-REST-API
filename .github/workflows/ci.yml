@@ -19,7 +19,6 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd temp/lcc-mytsg
-            docker-compose down && \
             docker rm -f $(docker ps -a -q)
             sudo rm -rf temp
             mkdir -p temp && \
