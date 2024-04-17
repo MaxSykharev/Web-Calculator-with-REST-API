@@ -26,4 +26,4 @@ jobs:
             docker-compose build && \
             docker-compose up -d && \
             cd ../.. && \
-            rm -rf temp
+            sudo rm -rf temp
