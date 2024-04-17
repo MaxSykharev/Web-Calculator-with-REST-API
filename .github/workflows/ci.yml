@@ -18,6 +18,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
+            cd temp/lcc-mytsg
             docker-compose down && \
             docker rm -f $(docker ps -a -q)
             sudo rm -rf temp
@@ -26,5 +27,4 @@ jobs:
             git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
             cd lcc-mytsg && \
             sudo docker-compose build && \
-            sudo docker-compose up -d && \
-            
+            sudo docker-compose up -d &&
