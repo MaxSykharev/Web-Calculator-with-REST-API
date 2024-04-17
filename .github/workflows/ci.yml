@@ -18,9 +18,9 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
-            cd temp/lcc-mytsg \
-            docker rm -f $(docker ps -a -q) \
-            sudo rm -rf temp \
+            cd temp/lcc-mytsg
+            docker rm -f $(docker ps -a -q)
+            sudo rm -rf temp
             mkdir -p temp && \
             cd temp && \
             git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
