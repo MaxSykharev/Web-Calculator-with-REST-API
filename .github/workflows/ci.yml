@@ -24,7 +24,7 @@ jobs:
             sudo rm -rf temp
             mkdir -p temp && \
             cd temp && \
-            sudo git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
+            git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
             cd lcc-mytsg && \
             sudo docker-compose build && \
             sudo docker-compose up -d && \
