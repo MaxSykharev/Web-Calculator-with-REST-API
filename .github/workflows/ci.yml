@@ -18,12 +18,4 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
-            mkdir -p temp && \
-            cd temp && \
-            git clone git@github.com:tsgdigitalservices/lcc-mytsg.git && \
-            cd lcc-mytsg && \
-            docker-compose down && \
-            docker-compose build && \
-            docker-compose up -d && \
-            cd ../.. && \
-            sudo rm -rf temp
+            deploy.sh
