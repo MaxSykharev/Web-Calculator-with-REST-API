@@ -20,6 +20,7 @@ jobs:
           script: |
             pwd
             git pull git@github.com:tsgdigitalservices/lcc-mytsg.git && \
+            cd lcc-mytsg
             docker-compose down && \
             docker-compose build && \
             docker-compose up -d && \
