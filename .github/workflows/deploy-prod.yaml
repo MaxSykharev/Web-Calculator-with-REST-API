@@ -6,6 +6,7 @@ on:
 
 jobs:
   deploy-prod:
+    if: github.event.release.prerelease == false
     environment: Production
     runs-on: ubuntu-latest
     steps:
