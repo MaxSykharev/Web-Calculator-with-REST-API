@@ -1,0 +1,22 @@
+name: Deploy to Production
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy-prod:
+    environment: Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to production
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          debug: true
+          host: ${{ secrets.HOST_PROD }}
+          username: ${{ secrets.USER_PROD }}
+          key: ${{ secrets.KEY_PROD }}
+          script: |
+            echo hello from prod

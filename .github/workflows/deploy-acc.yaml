@@ -1,0 +1,22 @@
+name: Deploy to Acceptance
+
+on:
+  release:
+    types: [prereleased]
+
+jobs:
+  deploy-acc:
+    environment: Next
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to acceptance
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          debug: true
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          script: |
+            echo hello for acc

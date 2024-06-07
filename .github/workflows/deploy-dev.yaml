@@ -1,0 +1,23 @@
+name: Deploy to Development
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy-dev:
+    environment: Development
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to development
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          debug: true
+          host: ${{ secrets.HOST_DEV }}
+          username: ${{ secrets.USER_DEV }}
+          key: ${{ secrets.KEY_DEV }}
+          script: |
+            echo hello from dev
